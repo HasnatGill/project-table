@@ -1,26 +1,23 @@
-import Styles from '@/app/styles/navbar.module.css'
-import Container from '@mui/material/Container'
-import Avatar from '@mui/material/Avatar';
+"use client"
 
-export default function navbar() {
-  return (
-    <>
-      <Container fixed >
-        <nav className={Styles.navbar}>
+import { Space, Avatar, Typography } from "antd"
+import styles from '@/app/page.module.css'
 
-          <div>
-            <h4>Hasnat Majid</h4>
-          </div>
+const { Title } = Typography;
 
-          <div className={Styles.right}>
-            <h5>Feedback</h5>
-            <h5>Support</h5>
-            <Avatar className={Styles.Avatar_Navbar} >H</Avatar>
-          </div>
-
-        </nav>
-      </Container>
-      <hr/>
-    </>
-  )
+export default function Navbar() {
+    return (
+        <>
+            <nav className={styles.NAVBAR}>
+                <div>
+                    <Title level={3} style={{margin:'0px'}}>AAA</Title>
+                </div>
+                <Space size='large'>
+                    <Title level={5} style={{margin:'0px'}}>Feedback</Title>
+                    <Title level={5} style={{margin:'0px'}}>Support</Title>
+                    <Avatar>A</Avatar>
+                </Space>
+            </nav>
+        </>
+    )
 }
